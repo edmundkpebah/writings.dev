@@ -1,0 +1,394 @@
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px solid red;
+}
+
+/* Global Styles */
+:root {
+    --activatedCharcoal-color: #232830;
+    --bunker-color: #0F1217;
+    --moonGray-color: #909090;
+    --babyRed-color: #FF7575;
+    --mayaBlue-color: #4699E0;
+    --white-color: #ffffff;
+
+    --primary-font: "Recursive", sans-serif;
+    --secondary-font: "Poppins-regular", sans-serif;
+    --secondary-font2: "Poppins-semiBold", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--activatedCharcoal-color);
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    width: 100%;
+}
+
+body a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+/* Hover Styles */
+.Page-Header a.hoverWhite:hover, .Footer a.hoverWhite:hover {
+    color: var(--moonGray-color);
+    transition: 0.3s;
+}
+
+.Category-Listing .links a.hoverGray:hover, .Pagination a.hoverGray:hover {
+    color: var(--white-color);
+    transition: 0.3s;
+}
+
+/* Recursive Font */
+body .recursive-font {
+  font-family: "Recursive", var(--primary-font), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" -9,
+    "CASL" 0,
+    "CRSV" 0.5,
+    "MONO" 0;
+}
+
+/* Page-Header */
+.Page-Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 80px 0px; 
+    gap: 80px;
+    flex: none;
+}
+
+.Page-Header .nav-cnt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px; 
+    font-size: 1.875rem;
+    flex: none;
+}
+
+.Page-Header .nav-cnt .navlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.Page-Header .nav-cnt .display {
+    display: none;
+    font-size: inherit;
+}
+
+.Page-Header .nav-cnt a {
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+}
+
+.Page-Header .heroSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0px;
+    gap: 24px;
+}
+
+.Page-Header .heroSection .heroTxt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.875rem;
+    text-align: center;
+}
+
+.Page-Header .heroSection .heroTxt h1 {
+    color: var(--babyRed-color);
+    font-size: 4.375rem;
+}
+
+
+/* Category Listing */
+.Category-Listing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    border-top: 2px solid rgba(225, 225, 225, 0.5);
+    width: 100%;
+}
+
+.Category-Listing .listingContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 36px;
+    width: 100%;
+}
+
+.Category-Listing .listingContent .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Category-Listing .listingContent .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 36px;
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+}
+
+.Category-Listing .listingContent .links a {
+    font-size: 1.75rem;
+    color: var(--moonGray-color);
+}
+
+.Category-Listing .listingContent .links  .blur{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(35, 40, 48, 0) 0%, var(--activatedCharcoal-color) 100%);
+    z-index: 10;
+}
+
+
+/* Articles */
+.articles {
+    display: grid;
+    grid-template-columns: 390px 390px 390px;
+    grid-auto-rows: 439px;
+    padding: 60px 0px;
+    gap: 25px;
+}
+
+.articles .article-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px;
+    background-color: var(--white-color);
+    border: 1px solid #252930;
+    border-radius: 22px;
+    color: var(--bunker-color);
+    cursor:pointer;
+}
+
+.articles .textImage {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.articles .image {
+    background-color: #eee;
+    border-radius: 22px;
+    height: 160px;
+    width: 100%;
+}
+
+.articles h2 {
+    font-family: var(--secondary-font2);
+    font-size: 1.25rem;
+}
+
+.articles h2:hover {
+    text-decoration: underline;
+    transition: 0.5s;
+}
+
+.articles .dateCategory {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* Pagination */
+.Pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 80px;
+    width: 100%;
+    gap: 48px;
+}
+
+.Pagination .pageNum {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    gap: 0px 36px;
+}
+
+.Pagination a {
+    font-size: 1.5rem;
+    color: var(--moonGray-color);
+}
+
+
+/* Footer */
+.Footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+}
+
+.Footer .footerContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+}
+
+.Footer .footerContent .author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.875rem;
+}
+
+.Footer .footerContent .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Footer .border {
+    padding: 8px 10px;
+    border-radius: 5px;
+    background-color: var(--mayaBlue-color);
+    font-size: 1.25rem;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1500px) {
+    .Page-Header, .Category-Listing, .articles, .Pagination, .Footer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .articles {
+        grid-template-columns: 390px 390px;
+        grid-auto-rows: 439px;
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 1340px) {
+    .articles {
+        grid-template-columns: 390px;
+        grid-auto-rows: 439px;
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Page-Header .nav-cnt .navlinks {
+        display: none;
+    }
+    .Page-Header .nav-cnt .display {
+        display: contents;
+    }
+    .Footer .footerContent {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Pagination .pageNum {
+        display: none;
+    }
+    .Page-Header, .Category-Listing, .articles, .Pagination, .Footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .Page-Header .heroSection .heroTxt h1 {
+        font-size: 3rem;
+    }
+    .Page-Header .heroSection .heroTxt p, .Page-Header .nav-cnt, .Footer .footerContent .author, .Category-Listing .listingContent .links a{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* Local Fonts */
+@font-face { /* Poppins Regular */
+    font-display: swap;
+    font-family: "Poppins-regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/poppins-v24-latin-regular.woff2") format("woff2");
+}
+
+@font-face { /* Poppins Semi-Bold */
+    font-display: swap;
+    font-family: "Poppins-semiBold";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/poppins-v24-latin-600.woff2") format("woff2");
+}
+
+@font-face { /* Recursive */
+    font-display: swap;
+    font-family: "Recursive";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../fonts/recursive-v44-latin-regular.woff2") format("woff2");
+}
+
+
+
+
